@@ -1,0 +1,230 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow: hidden;
+}
+
+p {
+    margin: 0;
+}
+
+header {
+    background: #4c44da;
+    color: #fff;
+    padding: 1em 0;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    height: 4.8em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 75%;
+    margin: auto;
+    padding: 0 1em;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1em;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.anuncio_neumatico {
+    position: fixed;
+    width: 22.5%;
+    left: 0;
+    height: 100%;
+}
+
+.coche2 {
+    height: 100%;
+    right: 0;
+    width: 22.5%;
+    position: fixed;
+}
+
+.articulo {
+    background: #c7c3c3;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    margin-top: 6.8em;
+    
+    overflow: hidden; /* Evita que el contenido desborde el contenedor */
+    word-wrap: break-word; /* Fuerza el ajuste de palabras largas */
+    
+   
+}
+
+.articulo p {
+    font-size: 1.2em;
+    margin-left: 1em;
+    margin-right: 1em;
+
+}
+
+.imagenArt {
+    margin: 0 auto;
+    width: 15em;
+}
+
+h1, h2 {
+    color: #4c44da;
+}
+
+footer {
+    background: #4c44da;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 1040px) {
+    .coche2 {
+        display: none;
+    }
+
+    .anuncio_neumatico {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #4c44da;
+        position: absolute;
+        top: 60px; /* Ajusta esto según la altura del header */
+        right: 0;
+        padding: 1em 0;
+    }
+
+    .menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.5em 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        color: #fff;
+        display: block;
+        padding: 0.5em 0;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .articulo {
+        width: 90%;
+        height: auto; /* Altura automática para dispositivos más pequeños */
+
+        min-height: calc(100vh - 1em); /* Resta la altura del header fijo */
+    }
+
+    .articulo p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 500px) {
+    .imagenArt {
+        display: none;
+    }
+    .logo {
+        font-size: 1.2em; /* Reducir el tamaño de la fuente del logo */
+    }
+
+    header {
+        height: 4em; /* Ajustar la altura del header */
+    }
+
+    nav {
+        padding: 0 0.5em; /* Reducir el padding del nav */
+    }
+
+    .articulo {
+        width: 95%;
+        height: 80vh; /* Mantener la altura fija del 80% de la ventana del navegador */
+        margin-top: 6em;
+        padding-bottom: 1em; /* Espacio adicional para el contenido */
+        overflow-y: auto; /* Permitir el desplazamiento vertical si el contenido excede la altura */
+    }
+
+    .articulo p {
+        font-size: 0.8em; /* Reducir el tamaño de la fuente del artículo */
+        margin-left: 0.5em; /* Reducir el margen izquierdo */
+        margin-right: 0.5em; /* Reducir el margen derecho */
+    }
+
+    footer {
+        font-size: 0.8em; /* Reducir el tamaño de la fuente del footer */
+        padding: 0.5em 0; /* Ajustar el padding del footer */
+    }
+}
+
+    
+
